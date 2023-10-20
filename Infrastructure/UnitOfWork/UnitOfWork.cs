@@ -23,10 +23,7 @@ namespace Infrastructure.UnitOfWork
         private IFormaPago _formasPago;
         private IGenero _generos;
         private IInsumo _insumos;
-        private IInsumoPrenda _insumosPrendas;
-        private IInsumoProveedor _insumosProveedores;
         private IInventario _inventarios;
-        private IInventarioTalla _inventarioTallas;
         private IMunicipio _municipios;
         private IOrden _ordenes;
         private IPais _paises;
@@ -184,30 +181,6 @@ namespace Infrastructure.UnitOfWork
             }
         }
 
-        public IInsumoPrenda InsumosPrendas
-        {
-            get
-            {
-                if (_insumosPrendas == null)
-                {
-                    _insumosPrendas = new InsumoPrendaRepository(_context);
-                }
-                return _insumosPrendas;
-            }
-        }
-
-        public IInsumoProveedor InsumosProveedores
-        {
-            get
-            {
-                if (_insumosProveedores == null)
-                {
-                    _insumosProveedores = new InsumoProveedorRepository(_context);
-                }
-                return _insumosProveedores;
-            }
-        }
-
         public IInvenatario Inventarios
         {
             get
@@ -217,18 +190,6 @@ namespace Infrastructure.UnitOfWork
                     _inventarios = new InventarioRepository(_context);
                 }
                 return _inventarios;
-            }
-        }
-
-        public IInventarioTalla InventarioTallas
-        {
-            get
-            {
-                if (_inventarioTallas == null)
-                {
-                    _inventarioTallas = new InventarioTallaRepository(_context);
-                }
-                return _inventarioTallas;
             }
         }
 

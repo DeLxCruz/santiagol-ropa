@@ -19,10 +19,7 @@ namespace Core.Interfaces
         IFormaPago FormasPago { get; }
         IGenero Generos { get; }
         IInsumo Insumos { get; }
-        IInsumoPrenda InsumosPrendas { get; }
-        IInsumoProveedor InsumosProveedores { get; }
         IInvenatario Inventarios { get; }
-        IInventarioTalla InventarioTallas { get; }
         IMunicipio Municipios { get; }
         IOrden Ordenes { get; }
         IPais Paises { get; }
@@ -33,7 +30,6 @@ namespace Core.Interfaces
         ITipoPersona TipoPersonas { get; }
         ITipoProteccion TipoProtecciones { get; }
         IVenta Ventas { get; }
-
 
         Task<int> SaveAsync();
     }
