@@ -1,0 +1,5 @@
+C:\Users\APM02-36\Documents\cs\.NET\santiagol-ropa\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\APM02-36\Documents\cs\.NET\santiagol-ropa\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM02-36\Documents\cs\.NET\santiagol-ropa\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\APM02-36\Documents\cs\.NET\santiagol-ropa\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+C:\Users\APM02-36\Documents\cs\.NET\santiagol-ropa\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
