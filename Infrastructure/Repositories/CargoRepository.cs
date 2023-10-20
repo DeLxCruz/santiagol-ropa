@@ -8,8 +8,13 @@ using Infrastructure.Data;
 
 namespace Infrastructure.Repositories
 {
-    public class CargoRepository 
+    public class CargoRepository : GenericRepository<Cargo>, ICargo
     {
-        
+        private readonly RopaApiContext _context;
+
+        public CargoRepository(RopaApiContext context) : base(context)
+        {
+            _context = context;
+        }
     }
 }
