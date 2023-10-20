@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities
 {
-    public class Cargo
+    public class Cargo :  BaseEntity
     {
-        
+        public string Descripcion { get; set; }
+        public double SueldoBase { get; set; }
+        public ICollection<Empleado> Empleados { get; set; }
     }
 }
