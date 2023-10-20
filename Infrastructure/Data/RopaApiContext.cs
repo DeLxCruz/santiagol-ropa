@@ -28,7 +28,7 @@ namespace Infrastructure.Data
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Insumo> Insumos { get; set; }
         public DbSet<InsumoPrenda> InsumoPrendas { get; set; }
-        public DBset<InsumoProveedores> InsumoProveedores { get; set; }
+        public DbSet<InsumoProveedor> InsumoProveedores { get; set; }
         public DbSet<Inventario> Inveantarios { get; set; }
         public DbSet<InventarioTalla> InventarioTallas { get; set; }
         public DbSet<Municipio> Municipios { get; set; }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities
 {
-    public class InventarioTalla : BaseEntity
+    public class InventarioTalla
     {
         [Required]
         public int IdInv { get; set; }

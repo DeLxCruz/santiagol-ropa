@@ -22,7 +22,7 @@ namespace Infrastructure.Data.Configuration
             builder.Property(e => e.RepresentanteLegal)
                  .IsRequired();
 
-            builder.Property(e => FechaCreacion)
+            builder.Property(e => e.FechaCreacion)
                  .IsRequired()
                  .HasColumnType("date");
 

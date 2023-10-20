@@ -9,8 +9,9 @@ namespace Core.Entities
     public class TipoPersona : BaseEntity
     {
         [Required]
-        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
         public ICollection<Proveedor> Proveedores { get; set; }
         public ICollection<Cliente> Clientes { get; set; }
+
     }
 }

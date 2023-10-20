@@ -11,7 +11,6 @@ namespace Infrastructure.Data.Configuration
             builder.ToTable("InsumoPrenda");
 
             builder.HasKey(e => new { e.IdInsumo, e.IdPrenda });
-            builder.HasKey(e => new { e.IdInsumo, e.IdPrneda });
 
             builder.HasOne(p => p.Insumos)
                  .WithMany(p => p.InsumoPrendas)

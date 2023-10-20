@@ -15,7 +15,7 @@ namespace Core.Entities
         public int IdPrenda { get; set; }
         public Prenda Prendas { get; set; }
         [Required]
-        public int CantidadPorducir { get; set; }
+        public int CantidadProducir { get; set; }
         [Required]
         public int IdColor { get; set; }
         public Color Colores { get; set; }

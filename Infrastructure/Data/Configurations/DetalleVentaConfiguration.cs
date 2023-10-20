@@ -17,7 +17,7 @@ namespace Infrastructure.Data.Configuration
                    .WithMany(p => p.DetalleVentas)
                    .HasForeignKey(p => p.IdVenta);
 
-            builder.HasOne(p => p.Productos)
+            builder.HasOne(p => p.Inventarios)
                  .WithMany(p => p.DetalleVentas)
                  .HasForeignKey(p => p.IdProducto);
 
@@ -29,7 +29,7 @@ namespace Infrastructure.Data.Configuration
                     .IsRequired()
                     .HasColumnType("int");
 
-            builder.Property(e => e.ValorUnitario)
+            builder.Property(e => e.ValorUnit)
                     .IsRequired()
                     .HasColumnType("double");
         }

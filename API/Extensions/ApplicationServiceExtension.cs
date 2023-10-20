@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreRateLimit;
+using Core.Interfaces;
+using Infrastructure.UnitOfWork;
+using Microsoft.Extensions.Options;
 
 namespace API.Extensions
 {
-    public class ApplicationServiceExtension
+    public static class ApplicationServiceExtensions
     {
         public static void ConfigureCors(this IServiceCollection services) => services.AddCors(options =>
         {
@@ -18,7 +22,7 @@ namespace API.Extensions
             });
         });
 
-        public static void AddApplicationServices(this IServiceCollection services, IConfiguration config)
+        public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }

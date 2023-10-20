@@ -14,10 +14,12 @@ namespace Infrastructure.Data.Configuration
             builder.Property(e => e.Id);
 
             builder.HasIndex(e => e.Nombre)
-                   .IsUnique()
-                   .HasColumnType("varchar(50)");
+                   .IsUnique();
 
-            builder.Property(e => ValorUnit)
+            builder.Property(e => e.Nombre)
+                    .IsRequired();
+
+            builder.Property(e => e.ValorUnit)
                     .IsRequired()
                     .HasColumnType("double");
 

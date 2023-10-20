@@ -20,5 +20,7 @@ namespace Core.Entities
         public int IdEstado { get; set; }
         public Estado Estados { get; set; }
         public ICollection<DetalleOrden> DetalleOrdenes { get; set; }
+        public ICollection<Inventario> Inventarios { get; set; }
+
     }
 }

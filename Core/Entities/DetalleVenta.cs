@@ -17,8 +17,9 @@ namespace Core.Entities
         [Required]
         public int IdTalla { get; set; }
         public Talla Tallas { get; set; }
-        public string Cantidad { get; set; }
+        public int Cantidad { get; set; }
         [Required]
         public double ValorUnit { get; set; }
+        
     }
 }

@@ -8,7 +8,7 @@ using Infrastructure.Repositories;
 
 namespace Infrastructure.UnitOfWork
 {
-    public class UnitOfWork : IUnitoOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly RopaApiContext _context;
 

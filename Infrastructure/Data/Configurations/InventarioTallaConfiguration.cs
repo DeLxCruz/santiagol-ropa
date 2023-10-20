@@ -10,8 +10,15 @@ namespace Infrastructure.Data.Configuration
         {
             builder.ToTable("InventarioTalla");
 
-            builder.HasKey(e => new { e.Id, e.IdInv });
-            builder.HasKey(e => new { e.Id, e.IdTalla });
+            builder.HasKey(e => new { e.IdInv, e.IdTalla });
+
+            builder.HasOne(p => p.Inventarios)
+            .WithMany(p => p.InventarioTallas)
+            .HasForeignKey(p => p.IdInv);
+
+            builder.HasOne(p => p.Tallas)
+            .WithMany(i => i.InventarioTallas)
+            .HasForeignKey(p => p.IdTalla);
 
             builder.Property(e => e.Cantidad)
                     .IsRequired()

@@ -20,11 +20,15 @@ namespace Core.Entities
         public int IdEstado { get; set; }
         public Estado Estados { get; set; }
         [Required]
-        public int IdTipProteccion { get; set; }
+        public int IdTipoProteccion { get; set; }
         public TipoProteccion TipoProtecciones { get; set; }
         [Required]
         public int IdGenero { get; set; }
+        public Genero Generos { get; set; }
         public ICollection<InsumoPrenda> InsumoPrendas { get; set; }
-        public ICollection<Inventario> Inventario { get; set; }
+        public ICollection<Inventario> Inventarios { get; set; }
+        public ICollection<DetalleOrden> DetalleOrdenes { get; set; }
+
+
     }
 }

@@ -9,7 +9,7 @@ namespace Core.Entities
     public class InsumoProveedor
     {
         [Required]
-        public int InsumoId { get; set; }
+        public int IdInsumo { get; set; }
         public Insumo Insumos { get; set; }
         [Required]
         public int IdProveedor { get; set; }
