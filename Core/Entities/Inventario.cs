@@ -14,9 +14,9 @@ namespace Core.Entities
         public int IdPrenda { get; set; }
         public Prenda Prendas { get; set; }
         [Required]
-        public int ValorVtaCop { get; set; }
+        public double ValorVtaCop { get; set; }
         [Required]
-        public int ValorVtaUsd { get; set; }
+        public double ValorVtaUsd { get; set; }
         public ICollection<InventarioTalla> InventarioTallas { get; set; }
         public ICollection<DetalleVenta> DetalleVentas { get; set; }
     }

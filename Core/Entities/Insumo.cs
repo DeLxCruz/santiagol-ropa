@@ -11,7 +11,7 @@ namespace Core.Entities
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public int ValorUnit { get; set; }
+        public double ValorUnit { get; set; }
         [Required]
         public int StockMin { get; set; }
         [Required]

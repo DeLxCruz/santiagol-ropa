@@ -11,8 +11,8 @@ namespace Core.Entities
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public int IdPais { get; set; }
-        public Pais Paises { get; set; }
+        public int IdDep { get; set; }
+        public Departamento Departamentos { get; set; }
         public ICollection<Empresa> Empresas { get; set; }
         public ICollection<Empleado> Empleados { get; set; }
     }

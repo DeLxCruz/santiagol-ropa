@@ -9,7 +9,7 @@ namespace Core.Entities
     public class Empleado : BaseEntity
     {
         [Required]
-        public int IdEmpleado { get; set; }
+        public int IdEmp { get; set; }
         [Required]
         public string Nombre { get; set; }
         [Required]

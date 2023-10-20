@@ -13,7 +13,23 @@ namespace Infrastructure.Data.Configuration
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
-            
+            builder.HasIndex(e => e.IdEmp)
+            .IsUnique();
+
+            builder.Property(e => e.Nombre)
+                 .IsRequired();
+
+            builder.HasOne(p => p.Cargos)
+                 .WithMany(p => p.Empleados)
+                 .HasForeignKey(p => p.IdCargo);
+
+            builder.Property(e => e.FechaIngreso)
+                    .IsRequired()
+                    .HasColumnType("date");
+
+            builder.HasOne(p => p.Municipios)
+                    .WithMany(p => p.Empleados)
+                    .HasForeignKey(p => p.IdMunicipio);
         }
     }
 }

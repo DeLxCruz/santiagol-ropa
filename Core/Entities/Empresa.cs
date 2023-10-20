@@ -15,5 +15,9 @@ namespace Core.Entities
         public string RepresentanteLegal { get; set; }
         [Required]
         public DateOnly FechaCreacion { get; set; }
+
+        [Required]
+        public int IdMun { get; set; }
+        public Municipio Municipios { get; set; }
     }
 }

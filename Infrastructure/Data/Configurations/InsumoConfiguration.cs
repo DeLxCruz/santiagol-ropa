@@ -1,12 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Core.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Data.Configurations
+namespace Infrastructure.Data.Configuration
 {
-    public class InsumoConfiguration
+    public class InsumoConfiguration : IEntityTypeConfiguration<Insumo>
     {
-        
+        public void Configure(EntityTypeBuilder<Insumo> builder)
+        {
+            builder.ToTable("Insumo");
+
+            builder.HasKey(e => e.Id);
+            builder.Property(e => e.Id);
+
+            builder.HasIndex(e => e.Nombre)
+                   .IsUnique()
+                   .HasColumnType("varchar(50)");
+
+            builder.Property(e => ValorUnit)
+                    .IsRequired()
+                    .HasColumnType("double");
+
+            builder.Property(e => e.StockMin)
+                    .IsRequired()
+                    .HasColumnType("int");
+
+            builder.Property(e => e.StockMax)
+                    .IsRequired()
+                    .HasColumnType("int");
+        }
     }
 }
